@@ -1,0 +1,36 @@
+@host = http://localhost:5000
+
+### Get all books
+GET {{host}}/api/books
+
+### Search by author
+GET {{host}}/api/books?author=kalam
+
+### Get one book
+GET {{host}}/api/books/1
+
+### Add a book
+POST {{host}}/api/books
+Content-Type: application/json
+
+{
+  "title": "Atomic Habits",
+  "author": "James Clear",
+  "published_year": 2018,
+  "price": 499
+}
+
+### Update a book
+PUT {{host}}/api/books/1
+Content-Type: application/json
+
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "published_year": 1988,
+  "price": 249,
+  "available": false
+}
+
+### Delete a book
+DELETE {{host}}/api/books/2
